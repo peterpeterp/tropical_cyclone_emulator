@@ -7,6 +7,7 @@ import xesmf as xe
 import pandas as pd
 from collections import Counter
 import collections
+from itertools import cycle
 
 # for plotting
 import seaborn as sns
@@ -21,6 +22,7 @@ import matplotlib as mpl
 from matplotlib import colors
 import cartopy
 import cartopy.crs as ccrs
+from cartopy.util import add_cyclic_point
 
 # for shapes
 import cartopy.io.shapereader as shapereader
@@ -33,21 +35,16 @@ from shapely.ops import cascaded_union
 import scipy
 from scipy import signal
 from scipy.optimize import linear_sum_assignment
-from itertools import cycle
-from cartopy.util import add_cyclic_point
-import math
 from scipy import stats
-
+from scipy.stats import ks_2samp
 
 import sklearn
 from sklearn import metrics
-# from haversine import haversine
 from sklearn.model_selection import KFold
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import pairwise_distances
 from sklearn.calibration import calibration_curve
 from sklearn import preprocessing
-from scipy.stats import ks_2samp
 from sklearn import cluster, datasets, mixture
 
 from minisom import MiniSom
